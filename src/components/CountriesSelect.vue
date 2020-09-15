@@ -30,7 +30,7 @@ export default {
 
     methods: {
         fetchCountries() {
-            const url = process.env.VUE_APP_COUNTRIES_ENDPOINT;
+            const url = `${process.env.VUE_APP_API_ENDPOINT}/countries`;
 
             fetch(url).then(res => res.json()).then(res => {
                 this.countries = res.countries;

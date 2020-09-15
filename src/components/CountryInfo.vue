@@ -36,7 +36,7 @@ export default {
         fetchCountryData(countryCode) {
             this.loading = true;
 
-            const url = `${process.env.VUE_APP_COUNTRIES_ENDPOINT}/${countryCode}`;
+            const url = `${process.env.VUE_APP_API_ENDPOINT}/countries/${countryCode}`;
 
             fetch(url).then(res => res.json()).then(res => {
                 this.confirmed = res.confirmed.value;
